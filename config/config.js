@@ -1,6 +1,4 @@
 import dotenv from "dotenv";
-
-process.env.NODE_ENV = process.env.NODE_ENV || "development";
 const envFound = dotenv.config();
 
 // If you can't find a .env file, (┛◉Д◉)┛彡┻━┻
@@ -13,7 +11,7 @@ if (envFound.error) {
 
 export default {
   /** The port on which the server is trying its best */
-  port: parseInt(process.env.PORT || 3000),
+  port: parseInt(process.env.PORT || 3000, 10),
 
   // Twitter config for the wee bot
   twitter: {
