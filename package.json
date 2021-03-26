@@ -1,0 +1,23 @@
+{
+  "name": "bumblebee-consolematch",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
+  "description": "A name generator worthy of British actor Bandolier Craterpatch",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "post-tweet": "node app.js tweet",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.34",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "twitter-lite": "^1.1.0"
+  },
+  "type": "module"
+}
