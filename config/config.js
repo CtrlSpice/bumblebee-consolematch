@@ -13,18 +13,26 @@ export default {
   /** The port on which the server is trying its best */
   port: parseInt(process.env.PORT || 3000, 10),
 
+  // Postgres database
+  db: {
+    connectionString: process.env.DATABASE_URL,
+  },
+
   // Twitter config for the wee bot
   twitter: {
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
     access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
   },
-  
+
   // WordsAPI config for generating new names
-  words: {
-    apiKey: process.env.WORDS_API_KEY,
-    host: process.env.WORDS_API_HOST,
+  wordsAPI: {
+    headers: {
+      "x-rapidapi-key": process.env.WORDS_API_KEY,
+      "x-rapidapi-host": process.env.WORDS_API_HOST,
+    },
+    baseURL: "https://wordsapiv1.p.rapidapi.com/words/",
   },
 
   // Mailchimp config for making the developer cry

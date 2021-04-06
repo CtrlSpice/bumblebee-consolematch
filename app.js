@@ -2,6 +2,7 @@ import express from "express";
 import config from "./config/config.js";
 import router from "./api/router.js";
 import jobs from "./jobs/jobs.js";
+import name from "./services/nameGenerator.js"
 
 async function startServer() {
   const app = express();
@@ -26,7 +27,12 @@ switch (runnable) {
     await jobs.tweet();
     break;
 
+  case "setupDb":
+    //await jobs.setupDb();
+    break;
+
   case "server":
+    await name();
     startServer();
     break;
 
