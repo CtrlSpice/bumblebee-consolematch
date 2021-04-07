@@ -1,12 +1,12 @@
 import { Router } from "express";
-import generateName from "../services/nameGenerator.js";
+import { getLatestName } from "../services/nameGenerator.js"
 //import { subscribe } from "../services/newsletter.js";
 
 const router = Router();
 
 // Home page route
 router.get("/", async (req, res) => {
-  const name = await generateName();
+  const name = await getLatestName();
   res.send(name);
 });
 

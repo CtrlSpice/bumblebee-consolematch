@@ -1,13 +1,18 @@
 import tweet from "../services/twitter.js";
-import generateName from "../services/nameGenerator.js";
-//import setupDb from "../db/setup.js"
+import { generateName, getLatestName } from "../services/nameGenerator.js";
+import setupDb from "../db/setup.js";
+
 export default {
   tweet: async () => {
-    const nameData = await generateName();
+    const nameData = await getLatestName();
     await tweet(nameData);
   },
 
+  update: async () => {
+    await generateName();
+  },
+
   setupDb: async () => {
-    //await setupDb();
-  }
+    await setupDb();
+  },
 };
