@@ -8,6 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "post-tweet": "node app.js tweet",
+    "update": "node app.js update",
     "start": "node app.js"
   },
   "author": "",
