@@ -33,12 +33,5 @@ export default {
       "x-rapidapi-host": process.env.WORDS_API_HOST,
     },
     baseURL: "https://wordsapiv1.p.rapidapi.com/words/",
-  },
-
-  // Mailchimp config for making the developer cry
-  mail: {
-    apiKey: process.env.MAILCHIMP_API_KEY,
-    server: process.env.MAILCHIMP_SERVER_PREFIX,
-    appId: process.env.MAILCHIMP_APP_ID,
-  },
+  }
 };
