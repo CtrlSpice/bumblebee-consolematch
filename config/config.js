@@ -15,7 +15,10 @@ export default {
 
   // Postgres database
   db: {
-    connectionString: process.env.DATABASE_URL + "?ssl=true",
+    connectionString: process.env.DATABASE_URL,
+    ssl : {
+      rejectUnauthorized: false
+    }
   },
 
   // Twitter config for the wee bot
