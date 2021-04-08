@@ -1,13 +1,13 @@
 import dotenv from "dotenv";
 const envFound = dotenv.config();
 
-// If you can't find a .env file, (┛◉Д◉)┛彡┻━┻
-if (envFound.error) {
-  //(☞ﾟヮﾟ)☞ ┻━┻
-  throw new Error(
-    `Couldn't find .env file in ${process.env.PWD} and very upset about it.`
-  );
-}
+// // If you can't find a .env file, (┛◉Д◉)┛彡┻━┻
+// if (envFound.error) {
+//   //(☞ﾟヮﾟ)☞ ┻━┻
+//   throw new Error(
+//     `Couldn't find .env file in ${process.env.PWD} and very upset about it.`
+//   );
+// }
 
 export default {
   /** The port on which the server is trying its best */
