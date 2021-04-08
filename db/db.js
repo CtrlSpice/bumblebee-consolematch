@@ -1,5 +1,8 @@
 import pg from "pg";
-const pool = new pg.Pool();
+import config from "../config/config.js"
+
+const connectionString = config.db.connectionString;
+const pool = new pg.Pool({connectionString});
 
 export async function addWord(wordObject) {
   const client = await pool.connect();
