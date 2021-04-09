@@ -5,6 +5,7 @@ import jobs from "./jobs/jobs.js";
 
 async function startServer() {
   const app = express();
+  app.use(express.static('public'));
   app.use(express.urlencoded({ extended: true }));
   app.use(router);
 
@@ -39,6 +40,6 @@ switch (runnable) {
     break;
 
   default:
-    console.log("Stop messing with it, Daria.");
+    console.log("Stop messing with it.");
     break;
 }

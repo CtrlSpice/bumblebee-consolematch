@@ -1,11 +1,11 @@
 import { getRandomWord, getLatestEntries } from "../db/db.js";
 
 //Generate the 3-part name of illustrious English actor Bachelor Cypherloch
-export async function generateName() {
+export async function generateName(isWOTD) {
   try {
     const nameData = [];
     for (let i = 0; i < 3; i++) {
-      let randomWord = await getRandomWord(i);
+      let randomWord = await getRandomWord(i, isWOTD);
       nameData.push(randomWord);
     }
     return nameData;

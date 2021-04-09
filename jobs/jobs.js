@@ -9,7 +9,7 @@ export default {
   },
 
   update: async () => {
-    await generateName();
+    await generateName(true);
   },
 
   setupDb: async () => {

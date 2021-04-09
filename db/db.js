@@ -91,7 +91,7 @@ export async function getLatestEntries() {
   }
 }
 
-export async function getRandomWord(section) {
+export async function getRandomWord(section, isWOTD) {
   try {
     // Get a random word
     const text = `SELECT * FROM words WHERE section = ${section} ORDER BY RANDOM() LIMIT 1;`;
@@ -102,7 +102,9 @@ export async function getRandomWord(section) {
     const randomWord = { word: res.rows[0].word, definitions: definitions };
 
     // Log the entry
-    await addEntry(res.rows[0].id);
+    if(isWOTD){
+      await addEntry(res.rows[0].id);
+    }
 
     return randomWord;
   } catch (error) {
