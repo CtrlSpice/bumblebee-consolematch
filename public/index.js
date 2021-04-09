@@ -11,6 +11,9 @@ $(document).ready(async () => {
       const randomName = await $.ajax({ url: "/randomName" });
 
       displayNameData(randomName);
+      
+      //Scroll to the top
+      $('html, body').animate({scrollTop: '0px'}, 300);
     });
   } catch (error) {
     console.error(error);
