@@ -6,147 +6,137 @@
     <title>bumblebee-consolematch</title>
     <link rel="stylesheet" href="css/tailwind.css" />
   </head>
-  <body>
-    <!-- Yellow background -->
-    <div
-      class="bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-300 mx-auto"
-    >
-      <!-- App Header -->
-      <div class="text-center py-12">
-        <img
-          class="inline-block h-10 px-4"
-          src="./images/bumblebee.svg"
-          alt="bumblebee"
-        />
-        <img
-          class="inline-block h-10 px-4"
-          src="./images/console.svg"
-          alt="console"
-        />
-        <img
-          class="inline-block h-10 px-4"
-          src="./images/match.svg"
-          alt="match"
-        />
-        <p class="font-mono font-bold mt-4 text-2xl text-gray-800">
-          bumblebee-consolematch
+  <body
+    class="bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-300 mx-auto"
+  >
+    <!-- App Header -->
+    <div class="text-center py-12">
+      <img
+        class="inline-block h-10 px-4"
+        src="./images/bumblebee.svg"
+        alt="bumblebee"
+      />
+      <img
+        class="inline-block h-10 px-4"
+        src="./images/console.svg"
+        alt="console"
+      />
+      <img
+        class="inline-block h-10 px-4"
+        src="./images/match.svg"
+        alt="match"
+      />
+      <p class="font-mono font-bold mt-4 text-2xl text-gray-800">
+        bumblebee-consolematch
+      </p>
+      <p class="font-mono text-xs text-gray-800">
+        a Benedict Cumberbatch name generator
+      </p>
+    </div>
+    <!-- White bubble -->
+    <div class="py-10 px-6 mx-6 lg:px-8 lg:mx-16 bg-white rounded-lg shadow-lg">
+      <!-- Text gets centered. -->
+      <div class="text-center">
+        <p class="mt-4 text-l text-gray-500" id="greeting">
+          Hello bees! Today's esteemed English actor is
         </p>
-        <p class="font-mono text-xs text-gray-800">
-          a Benedict Cumberbatch name generator
-        </p>
+        <p
+          id="full-name"
+          class="mt-2 text-2xl leading-8 font-extrabold text-gray-800"
+        ></p>
       </div>
-      <!-- White bubble -->
-      <div
-        class="py-10 px-6 mx-6 lg:px-8 lg:mx-16 bg-white rounded-lg shadow-lg"
-      >
-        <!-- Text gets centered. -->
-        <div class="text-center">
-          <p class="mt-4 text-l text-gray-500" id="greeting">
-            Hello bees! Today's esteemed English actor is
-          </p>
-          <p
-            id="full-name"
-            class="mt-2 text-2xl leading-8 font-extrabold text-gray-800"
-          ></p>
-        </div>
 
-        <!-- Definitions -->
-        <div class="mt-8">
-          <dl
-            class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10"
-          >
-            <!-- Section 0 -->
-            <div class="relative">
-              <dt>
-                <img class="absolute flex h-8 w-8" src="images/bumblebee.svg" />
-                <p
-                  id="section-0"
-                  class="ml-12 text-lg leading-4 font-medium text-gray-900"
-                ></p>
-              </dt>
-
-              <ol
-                id="definitions-0"
-                class="list-decimal mt-2 ml-16 pr-4 text-base text-gray-500"
-              ></ol>
-            </div>
-
-            <!-- Section 1 -->
-            <div class="relative">
-              <dt>
-                <img class="absolute flex h-8 w-8" src="images/console.svg" />
-                <p
-                  id="section-1"
-                  class="ml-12 text-lg leading-4 font-medium text-gray-900"
-                ></p>
-              </dt>
-
-              <ol
-                id="definitions-1"
-                class="list-decimal mt-2 ml-16 pr-4 text-base text-gray-500"
-              ></ol>
-            </div>
-
-            <!-- Section 2 -->
-            <div class="relative">
-              <dt>
-                <img class="absolute flex h-8 w-8" src="images/match.svg" />
-                <p
-                  id="section-2"
-                  class="ml-12 text-lg leading-4 font-medium text-gray-900"
-                ></p>
-              </dt>
-
-              <ol
-                id="definitions-2"
-                class="list-decimal mt-2 ml-16 pr-4 text-base text-gray-500"
-              ></ol>
-            </div>
-          </dl>
-        </div>
-        <!-- Generate Name Button -->
-        <div class="mt-10 text-center">
-          <button
-            id="new-name-btn"
-            class="font-semibold py-2 px-4 rounded bg-gray-800 hover:bg-yellow-400 text-yellow-400 hover:text-gray-800"
-          >
-            Give Me Another!
-          </button>
-        </div>
-      </div>
-      <!-- App footer -->
-      <div class="text-center py-12">
-        <a href="https://github.com/CtrlSpice/bumblebee-consolematch"
-          ><img class="inline-block h-8 px-4" src="images/github.svg"
-          alt="github""></a
+      <!-- Definitions -->
+      <div class="mt-8">
+        <dl
+          class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10"
         >
-        <a href="mailto:amelia.ardath@gmail.com"
-          ><img
-            class="inline-block h-8 px-4"
-            src="images/email.svg"
-            alt="email"
-        /></a>
-        <a href="https://twitter.com/consolematch"
-          ><img
-            class="inline-block h-8 px-4"
-            src="images/twitter.svg"
-            alt="twitter"
-        /></a>
-        <div class="mt-4 font-mono text-xs text-gray-800">
-          <p>
-            made with 🐝 by @CtrlSpice
-          </p>
-          Icons by
-          <a
-            href="https://www.flaticon.com/authors/pixel-perfect"
-            title="Pixel perfect"
-            >Pixel perfect</a
-          >
-          from
-          <a href="https://www.flaticon.com/" title="Flaticon"
-            >www.flaticon.com</a
-          >
-        </div>
+          <!-- Section 0 -->
+          <div class="relative">
+            <dt>
+              <img class="absolute flex h-8 w-8" src="images/bumblebee.svg" />
+              <p
+                id="section-0"
+                class="ml-12 text-lg leading-4 font-medium text-gray-900"
+              ></p>
+            </dt>
+
+            <ol
+              id="definitions-0"
+              class="list-decimal mt-2 ml-16 pr-4 text-base text-gray-500"
+            ></ol>
+          </div>
+
+          <!-- Section 1 -->
+          <div class="relative">
+            <dt>
+              <img class="absolute flex h-8 w-8" src="images/console.svg" />
+              <p
+                id="section-1"
+                class="ml-12 text-lg leading-4 font-medium text-gray-900"
+              ></p>
+            </dt>
+
+            <ol
+              id="definitions-1"
+              class="list-decimal mt-2 ml-16 pr-4 text-base text-gray-500"
+            ></ol>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="relative">
+            <dt>
+              <img class="absolute flex h-8 w-8" src="images/match.svg" />
+              <p
+                id="section-2"
+                class="ml-12 text-lg leading-4 font-medium text-gray-900"
+              ></p>
+            </dt>
+
+            <ol
+              id="definitions-2"
+              class="list-decimal mt-2 ml-16 pr-4 text-base text-gray-500"
+            ></ol>
+          </div>
+        </dl>
+      </div>
+      <!-- Generate Name Button -->
+      <div class="mt-10 text-center">
+        <button
+          id="new-name-btn"
+          class="font-semibold py-2 px-4 rounded bg-gray-800 hover:bg-yellow-400 text-yellow-400 hover:text-gray-800"
+        >
+          Give Me Another!
+        </button>
+      </div>
+    </div>
+    <!-- App footer -->
+    <div class="text-center py-12">
+      <a href="https://github.com/CtrlSpice/bumblebee-consolematch"
+        ><img class="inline-block h-8 px-4" src="images/github.svg"
+        alt="github""></a
+      >
+      <a href="mailto:amelia.ardath@gmail.com"
+        ><img class="inline-block h-8 px-4" src="images/email.svg" alt="email"
+      /></a>
+      <a href="https://twitter.com/consolematch"
+        ><img
+          class="inline-block h-8 px-4"
+          src="images/twitter.svg"
+          alt="twitter"
+      /></a>
+      <div class="mt-4 font-mono text-xs text-gray-800">
+        <p>made with 🐝 by @CtrlSpice</p>
+        Icons by
+        <a
+          href="https://www.flaticon.com/authors/pixel-perfect"
+          title="Pixel perfect"
+          >Pixel perfect</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
       </div>
     </div>
     <script
